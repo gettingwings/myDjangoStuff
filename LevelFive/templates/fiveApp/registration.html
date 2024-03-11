@@ -1,0 +1,20 @@
+
+{% extends 'fiveApp/base.html' %}
+{% load static %}
+{% block body_block %}
+<div class="jumbotron">
+  <h1>register</h1>
+  {% if registered %}
+    <h1>Thank you for registering!!</h1>
+  {% else %}
+    <h1>Register here!</h1>
+    <h3>Please fill the form:</h3>
+    <form enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      {{user_form.as_p}}
+      {{profile_form.as_p}}
+      <input type="submit" value="register">
+    </form>
+  {% endif  %}
+</div>
+{% endblock %}

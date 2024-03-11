@@ -1,0 +1,17 @@
+body{
+  background-color: cadetblue;
+}
+
+table, td, th{
+  border: 1px solid black;
+}
+
+#one, #two{
+  width: 150px;
+  background-color: skyblue;
+}
+
+#three{
+  width: 250px;
+  background-color: blue;
+}
